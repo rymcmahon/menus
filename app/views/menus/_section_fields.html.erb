@@ -1,5 +1,9 @@
 <div class="nested-fields">
   <%= f.label :name, "Section Name" %>
   <%= f.text_field :name %>
+    <%= f.fields_for :items do |item| %>
+      <%= render 'item_fields', :f => item %>
+    <% end %>
     <%= link_to_remove_association "remove section", f, class:"btn btn-danger btn-xs" %>
+    <%= link_to_add_association 'Add Item', f, :items, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-xs" %>
 </div>
