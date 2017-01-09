@@ -1,0 +1,9 @@
+<div class="container">
+  <h3><%= @menu.name %></h3>
+  <h4><%= @menu.sections.first.name %></h4>
+  <% @menu.sections.first.items.each do |item| %>
+    <h5><%= item.name %></h5>
+    <p><%= item.description %></p>
+    <p>$<%= item.price %></p>
+  <% end %>
+</div>
