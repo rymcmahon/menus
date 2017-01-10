@@ -9,12 +9,26 @@ class MenusController < ApplicationController
     @menu.sections.build
   end
 
+  def edit
+    @menu = Menu.find(params[:id])
+  end
+
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
       redirect_to '/'
     else
       render 'new'
+    end
+  end
+
+  def update
+    @menu = Menu.find(params[:id])
+
+    if @menu.update(menu_params)
+      redirect_to @menu
+    else
+      render 'edit'
     end
   end
 

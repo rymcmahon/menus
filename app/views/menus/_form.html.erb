@@ -1,4 +1,7 @@
 <%= form_for @menu do |f| %>
+  <% if @menu.errors.any? %>
+    <%= render 'errors' %>
+  <% end %>
   <div>
     <%= f.label :name,"Menu Name" %>
     <%= f.text_field :name %>
