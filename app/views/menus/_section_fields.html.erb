@@ -1,9 +1,15 @@
 <div class="nested-fields">
-  <%= f.label :name, "Section Name" %>
-  <%= f.text_field :name %>
+  <div class="row">
+    <div class="form-group col-sm-12 col-md-4 col-lg-4">
+      <%= f.label :name, "Section Name" %>
+      <%= link_to_remove_association "remove section", f, class:"btn btn-danger btn-xs" %>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+  </div>
     <%= f.fields_for :items do |item| %>
       <%= render 'item_fields', :f => item %>
     <% end %>
-    <%= link_to_remove_association "remove section", f, class:"btn btn-danger btn-xs" %>
-    <%= link_to_add_association 'Add Item', f, :items, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-xs" %>
+    <div class="form-group">
+      <%= link_to_add_association 'Add Item', f, :items, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-xs" %>
+    </div>
 </div>

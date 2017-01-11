@@ -1,11 +1,27 @@
 <div class="nested-fields">
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.label :available %>
-  <%= f.check_box :available %>
+  <div class="row">
+    <div class="form-group col-sm-12 col-md-3 col-lg-3">
+      <%= f.label :name, "Item Name" %>
+      <%= f.text_field :name, class:"form-control" %>
+    </div>
+    <div class="form-group col-sm-12 col-md-3 col-md-3">
+      <%= f.label :price %>
+      <%= f.text_field :price, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-12 col-md-6 col-lg-6">
+      <%= f.label :description, "Item Description" %>
+      <%= f.text_area :description, class:"form-control" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-sm-12 col-md-3 col-lg-3">
+
+      <%= f.label :available, "Item Available?" %>
+      <%= f.check_box :available %>
+    </div>
+
+  </div>
   <%= link_to_remove_association "remove item", f, class:"btn btn-danger btn-xs" %>
 </div>
