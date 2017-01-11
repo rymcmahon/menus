@@ -1,18 +1,23 @@
-<%= form_for @menu do |f| %>
-  <% if @menu.errors.any? %>
-    <%= render 'errors' %>
+
+  <%= form_for @menu, html: {class:"form-horizontal menu-form"} do |f| %>
+    <fieldset>
+      <% if @menu.errors.any? %>
+      <%= render 'errors' %>
+      <% end %>
+      <div class="form-group">
+        <%= f.label :name,"Menu Name", class:"control-label" %>
+        <%= f.text_field :name, class:"form-control" %>
+      </div>
+      <div class="form-group">
+        <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-xs" %>
+        <%= f.fields_for :sections do |section| %>
+          <%= render 'section_fields', :f => section %>
+        <% end %>
+      </div>
+      <div>
+        <%= f.button :submit, class:"btn btn-success btn-lg" %>
+      </div>
+    </fieldset>
   <% end %>
-  <div>
-    <%= f.label :name,"Menu Name" %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-xs" %>
-    <%= f.fields_for :sections do |section| %>
-      <%= render 'section_fields', :f => section %>
-    <% end %>
-  </div>
-  <div>
-    <%= f.button :submit, class:"btn btn-success btn-md" %>
-  </div>
-<% end %>
+
+
