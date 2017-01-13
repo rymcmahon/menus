@@ -1,22 +1,22 @@
 <div class="nested-fields items-wrapper">
   <div class="row">
-    <div class="form-group col-sm-12 col-md-3 col-lg-3">
+    <div class="form-group col-sm-12 col-md-12 col-lg-12">
       <%= f.label :name, "Item Name" %>
       <%= f.text_field :name, placeholder:"16oz. NY Strip Steak", class:"form-control" %>
     </div>
-    <div class="form-group col-sm-12 col-md-3 col-md-3">
+    <div class="form-group col-sm-12 col-md-12 col-md-12">
       <%= f.label :price %>
       <%= f.text_field :price, placeholder:"XX.XX", class:"form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-sm-12 col-md-6 col-lg-6">
+    <div class="form-group col-sm-12 col-md-12 col-lg-12">
       <%= f.label :description, "Item Description" %>
       <%= f.text_area :description, placeholder:"Grilled grass-fed NY Strip, carmelized onion jam, roasted pancetta potatoes.", class:"form-control" %>
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-sm-12 col-md-3 col-lg-3">
+    <div class="form-group col-sm-12 col-md-12 col-lg-12">
       <%= f.label :available, "Item Available?" %>
       <%= f.check_box :available %>
       <%= link_to_remove_association "remove item", f, class:"btn btn-danger btn-xs" %>
