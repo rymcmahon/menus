@@ -8,13 +8,15 @@
       <%= f.text_field :name, placeholder:"Lunch or Dinner or Bar", class:"form-control" %>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group add-btn">
     <%= f.fields_for :sections do |section| %>
     <%= render 'section_fields', :f => section %>
     <% end %>
-    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "before" }, class:"btn btn-info btn-md section-btn" %>
+    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "before" }, class:"btn btn-info btn-sm section-btn" %>
   </div>
-  <div>
-    <%= f.button @menu.new_record? ? "Create Menu" : "Update Menu", class:"btn btn-success btn-default" %>
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+      <%= f.button @menu.new_record? ? "Create Menu" : "Update Menu", class:"btn btn-success btn-lg full-btn" %>
+    </div>
   </div>
 <% end %>

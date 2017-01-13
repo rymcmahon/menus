@@ -1,7 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
 .section-wrapper {
   padding-left: 30px;
 }
@@ -35,4 +34,17 @@ p#brand-header {
   font-family: cursive;
   font-size: 30px;
   color: #fff;
+}
+
+.add-btn {
+  margin-bottom: 30px;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.remove-btn {
+  float: right;
 }
