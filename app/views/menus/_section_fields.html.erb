@@ -1,12 +1,10 @@
 <div class="nested-fields section-wrapper">
-  <div class="row">
-    <div class="form-group col-sm-12 col-md-4 col-lg-4">
-      <%= f.label :name, "Section Name" %> <%= link_to_remove_association "remove section", f, class:"btn btn-danger btn-xs" %>
-      <%= f.text_field :name, placeholder:"Appetizers or Salads or Entrees", class:"form-control" %>
-    </div>
-  </div>
   <div class="form-group">
-    <%= link_to_add_association 'Add Item', f, :items, :data => {"association-insertion-method" => "before" }, class:"btn btn-warning btn-md" %>
+    <%= f.label :name, "Section Name" %> <%= link_to_remove_association "remove section", f, data: {confirm: 'Are you sure you want to remove this section?'}, class:"btn btn-danger btn-xs remove-btn" %>
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+  <div class="form-group add-btn">
+    <%= link_to_add_association 'Add Item', f, :items, :data => {"association-insertion-method" => "before" }, class:"btn btn-warning btn-sm" %>
   </div>
   <%= f.fields_for :items do |item| %>
     <%= render 'item_fields', :f => item %>

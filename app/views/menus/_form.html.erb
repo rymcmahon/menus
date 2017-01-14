@@ -2,19 +2,17 @@
   <% if @menu.errors.any? %>
     <%= render 'errors' %>
   <% end %>
-  <div class="row">
-    <div class="form-group col-sm-12 col-md-4 col-lg-4">
-      <%= f.label :name,"Menu Name" %>
-      <%= f.text_field :name, placeholder:"Lunch or Dinner or Bar", class:"form-control" %>
-    </div>
-  </div>
   <div class="form-group">
-    <%= f.fields_for :sections do |section| %>
-    <%= render 'section_fields', :f => section %>
-    <% end %>
-    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "before" }, class:"btn btn-info btn-md section-btn" %>
+    <%= f.label :name,"Menu Name" %>
+    <%= f.text_field :name, class:"form-control" %>
+    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-sm section-btn" %>
   </div>
-  <div>
-    <%= f.button @menu.new_record? ? "Create Menu" : "Update Menu", class:"btn btn-success btn-default" %>
+  <%= f.fields_for :sections do |section| %>
+    <%= render 'section_fields', :f => section %>
+  <% end %>
+  <div class="row submit-menu-btn-row">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
+      <%= f.button @menu.new_record? ? "Create Menu" : "Update Menu", class:"btn btn-success btn-lg full-btn" %>
+    </div>
   </div>
 <% end %>
