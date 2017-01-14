@@ -2,11 +2,15 @@
 @import "bootstrap";
 
 .section-wrapper {
-  padding-left: 30px;
+  padding-left: 15px;
+}
+
+.section-btn {
+  margin-top: 15px;
 }
 
 .items-wrapper {
-  padding-left: 15px;
+ padding-left: 15px;
 }
 
 .container-fluid {
@@ -18,12 +22,18 @@
   padding: 0 40px;
 }
 
+.nav-links {
+  color: #fff;
+  font-size: 16px;
+}
+
 .menu-form-wrap {
   width: 600px;
   margin: 0 auto;
   background-color: #f5f5f5;
   border-radius: 5px;
   padding: 30px 15px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
 .center-form-header {
@@ -42,9 +52,14 @@ p#brand-header {
 
 .full-btn {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .remove-btn {
   float: right;
+}
+
+.submit-menu-btn-row {
+  border-top: solid 1px #e1e1e1;
+  margin-top: 40px;
 }
