@@ -1,11 +1,16 @@
-<div class="container">
-  <h3><%= @menu.name %></h3>
+<div id="menu-wrapper">
+  <h2 id="menu-name"><%= @menu.name %> Menu</h2>
   <% @menu.sections.each do |section| %>
-    <h4><%= section.name %></h4>
-    <% section.items.available.each do |item| %>
-      <h5><%= item.name %></h5>
-      <p><%= item.description %></p>
-      <p>$<%= item.price %></p>
-    <% end %>
+    <h4 id="section-name"><%= section.name %></h4>
+    <div class="row">
+      <% section.items.available.each do |item| %>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <h5><%= item.name %></h5>
+          <p><%= item.description %></p>
+          <p>$<%= item.price %></p>
+
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>

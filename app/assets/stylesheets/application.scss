@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
+@import "bootswatch/sandstone/variables";
 @import "bootstrap";
+@import "bootswatch/sandstone/bootswatch";
 
 .section-wrapper {
   padding-left: 15px;
@@ -17,20 +19,20 @@
  padding: 0;
 }
 
-.navbar-inverse {
+.navbar-default {
   border-radius: 0;
   padding: 0 40px;
 }
 
-.nav-links {
-  color: #fff;
-  font-size: 16px;
+.navbar .nav > li > a{
+
+  font-size: 14px;
 }
 
 .menu-form-wrap {
   width: 600px;
   margin: 0 auto;
-  background-color: #f5f5f5;
+  background-color: #F8F5F0;
   border-radius: 5px;
   padding: 30px 15px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
@@ -53,6 +55,7 @@ p#brand-header {
 .full-btn {
   width: 100%;
   margin-top: 40px;
+  font-size: 14px;
 }
 
 .remove-btn {
@@ -62,4 +65,37 @@ p#brand-header {
 .submit-menu-btn-row {
   border-top: solid 1px #e1e1e1;
   margin-top: 40px;
+}
+
+/******* Menus Index ******/
+.menu-index-wrap table{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.menu-index-wrap table th {
+  font-size: 22px;
+}
+
+.menu-table-head {
+  text-align: center;
+}
+
+/******* Menus Show ******/
+
+#menu-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 30px 15px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+#menu-name {
+  text-align: center;
+}
+
+#section-name {
+  text-align: center;
 }
