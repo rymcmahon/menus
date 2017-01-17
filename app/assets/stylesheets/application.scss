@@ -1,8 +1,15 @@
 @import "bootstrap-sprockets";
+@import "bootswatch/sandstone/variables";
 @import "bootstrap";
+@import "bootswatch/sandstone/bootswatch";
+@import url('https://fonts.googleapis.com/css?family=Courgette');
 
-.section-wrapper {
-  padding-left: 15px;
+.menu-form-card {
+  background-color: #F8F5F0;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .section-btn {
@@ -17,23 +24,20 @@
  padding: 0;
 }
 
-.navbar-inverse {
+.navbar-default {
   border-radius: 0;
   padding: 0 40px;
 }
 
-.nav-links {
-  color: #fff;
-  font-size: 16px;
+.navbar .nav > li > a{
+
+  font-size: 14px;
 }
 
 .menu-form-wrap {
   width: 600px;
   margin: 0 auto;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  padding: 30px 15px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  padding: 15px;
 }
 
 .center-form-header {
@@ -41,7 +45,7 @@
 }
 
 p#brand-header {
-  font-family: cursive;
+  font-family: 'Courgette', cursive;
   font-size: 30px;
   color: #fff;
 }
@@ -52,14 +56,56 @@ p#brand-header {
 
 .full-btn {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
+  font-size: 14px;
 }
 
 .remove-btn {
   float: right;
+  margin-bottom: 7px;
 }
 
 .submit-menu-btn-row {
-  border-top: solid 1px #e1e1e1;
+  margin: 20px 0 40px 0;
+}
+
+/******* Menus Index ******/
+.menu-index-wrap table{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.menu-index-wrap table th {
+  font-size: 22px;
+}
+
+.menu-table-head {
+  text-align: center;
+}
+
+/******* Menus Show ******/
+
+#menu-wrapper {
+  width: 1000px;
+  margin: 60px auto;
+}
+
+#menu-name {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+#section-name {
+  text-align: center;
   margin-top: 40px;
+}
+
+.courgette-text {
+  font-family: 'Courgette', cursive;
+}
+
+.price {
+  float: right;
 }
