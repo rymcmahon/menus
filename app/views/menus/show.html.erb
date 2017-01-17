@@ -1,14 +1,12 @@
 <div id="menu-wrapper">
-  <h2 id="menu-name"><%= @menu.name %> Menu</h2>
+  <h2 class="courgette-text" id="menu-name"><%= @menu.name %> Menu</h2>
   <% @menu.sections.each do |section| %>
-    <h4 id="section-name"><%= section.name %></h4>
+    <h3 class="courgette-text" id="section-name"><%= section.name %></h3>
     <div class="row">
       <% section.items.available.each do |item| %>
         <div class="col-sm-12 col-md-4 col-lg-4">
-          <h5><%= item.name %></h5>
+          <h4 class="courgette-text"><%= item.name %> <span class="price">$<%= item.price %></span></h4>
           <p><%= item.description %></p>
-          <p>$<%= item.price %></p>
-
         </div>
       <% end %>
     </div>
