@@ -2,7 +2,7 @@
   <% if @menu.errors.any? %>
     <%= render 'errors' %>
   <% end %>
-  <div class="form-group">
+  <div class="form-group menu-form-card ">
     <%= f.label :name,"Menu Name" %>
     <%= f.text_field :name, class:"form-control" %>
     <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-sm section-btn" %>
