@@ -2,10 +2,15 @@
   <% if @menu.errors.any? %>
     <%= render 'errors' %>
   <% end %>
-  <div class="form-group menu-form-card ">
+  <div class="form-group" id="menu-name-card">
     <%= f.label :name,"Menu Name" %>
     <%= f.text_field :name, class:"form-control" %>
-    <%= link_to_add_association 'Add Section', f, :sections, :data => {"association-insertion-method" => "after" }, class:"btn btn-info btn-sm section-btn" %>
+    <%= link_to_add_association 'Add Section', f, :sections, :data => {association_insertion_method: "append", association_insertion_node: "#place-here"}, class:"btn btn-info btn-sm section-btn" %>
+  </div>
+  <div class="section-nested">
+    <div id="place-here">
+
+    </div>
   </div>
   <%= f.fields_for :sections do |section| %>
     <%= render 'section_fields', :f => section %>

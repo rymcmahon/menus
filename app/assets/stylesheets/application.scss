@@ -35,7 +35,7 @@
 }
 
 .menu-form-wrap {
-  width: 600px;
+  width: 1170px;
   margin: 0 auto;
   padding: 15px;
 }
@@ -67,6 +67,26 @@ p#brand-header {
 
 .submit-menu-btn-row {
   margin: 20px 0 40px 0;
+}
+
+.section-card {
+  width: 370px;
+  vertical-align: top;
+  display: inline-block;
+  margin: 10px 5px;
+  background-color: #F8F5F0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#menu-name-card {
+  width: 600px;
+  margin: 20px auto 20px auto;
+  background-color: #F8F5F0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 /******* Menus Index ******/
@@ -108,4 +128,9 @@ p#brand-header {
 
 .price {
   float: right;
+}
+
+#place-to-insert {
+  float:left;
+  display: inline;
 }
