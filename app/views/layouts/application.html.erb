@@ -28,17 +28,36 @@
             <li class="nav-links"><a href="#">Menus</a></li>
             <li class="nav-links"><a href="#">Contact</a></li>
             <li class="nav-links"><a href="#">About</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log Out <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/menus/">View Menus</a></li>
-                <li><a href="/menus/new">Create Menu</a></li>
-              </ul>
-            </li>
+            <% if user_signed_in? %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/menus/">View Menus</a></li>
+                  <li><a href="/menus/new">Create Menu</a></li>
+                  <li><%= link_to('Log Out', destroy_user_session_path, :method => :delete) %></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>
     </nav>
+    <div class="flash-msg">
+      <% if notice %>
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4><%= notice %></h4>
+      </div>
+      <% end %>
+      <% if alert %>
+      <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4><%= alert %></h4>
+      </div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
