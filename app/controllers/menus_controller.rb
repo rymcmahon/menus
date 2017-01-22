@@ -1,4 +1,5 @@
 class MenusController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
   def index
     @menus = Menu.all
   end
@@ -32,6 +33,12 @@ class MenusController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @menu = Menu.find(params[:id])
+    @menu.destroy
+    redirect_to '/', alert: 'Menu Deleted!'
   end
 
   private
