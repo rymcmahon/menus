@@ -1,8 +1,12 @@
 <div class="menu-index-wrap">
+  <h1 class="menu-headline">Menu List</h1>
   <table class="table">
     <thead>
       <tr>
         <th>Menu Name</th>
+        <th># of Sections</th>
+        <th># of Items</th>
+        <th>Created On</th>
         <th>View Menu</th>
         <th>Edit Menu</th>
         <th>Delete Menu</th>
@@ -12,6 +16,15 @@
       <% @menus.each do |menu| %>
         <tr>
           <td><%= menu.name %></td>
+          <td><%= menu.sections.count %></td>
+          <% items = [] %>
+          <% menu.sections.each do |section| %>
+            <% section.items.each do |item| %>
+              <% items << item.name %>
+            <% end %>
+          <% end %>
+          <td><%= items.count %></td>
+          <td><%= menu.created_at.strftime('%m/%d/%y') %></td>
           <td><%= link_to menu_path(:id => menu.id) do %>
                 <i class="fa fa-eye" aria-hidden="true"></i>
             <% end %>
@@ -29,4 +42,3 @@
     </tbody>
   </table>
 </div>
-
