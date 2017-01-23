@@ -19,7 +19,7 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to '/'
+      redirect_to @menu
     else
       render 'new'
     end
