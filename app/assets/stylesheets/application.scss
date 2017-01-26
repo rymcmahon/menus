@@ -167,3 +167,9 @@ p#brand-header {
   float:left;
   display: inline;
 }
+
+@media (max-width: 450px ) {
+  p#brand-header {
+    font-size: 25px;
+  }
+}
