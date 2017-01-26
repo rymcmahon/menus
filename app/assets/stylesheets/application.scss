@@ -139,7 +139,7 @@ p#brand-header {
 /******* Menus Show ******/
 
 #menu-wrapper {
-  width: 1000px;
+  padding: 0 2em;
   margin: 60px auto;
 }
 
@@ -171,5 +171,11 @@ p#brand-header {
 @media (max-width: 450px ) {
   p#brand-header {
     font-size: 25px;
+  }
+}
+
+@media (min-width: 768px ) {
+  #menu-wrapper {
+    padding: 0 4em;
   }
 }
